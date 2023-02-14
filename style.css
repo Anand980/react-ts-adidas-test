@@ -1,0 +1,20 @@
+h1,
+p {
+  font-family: Lato;
+}
+
+h2 {
+  justify-content: center;
+  text-align: center;
+  border: 1px solid;
+  background-color: black;
+  color: white;
+  font-family: cursive;
+}
+
+.post {
+  border: 1px solid grey;
+  padding: 5px;
+  background-color: gainsboro;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
