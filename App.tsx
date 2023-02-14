@@ -5,6 +5,7 @@ import './style.css';
 export default function App() {
   const [users, setUsers] = useState([]);
   const [posts, setPosts] = useState([]);
+  const [searchuser, setSearchUser] = useState('');
 
   const usersurl = 'https://jsonplaceholder.typicode.com/users';
   const postsurl = 'https://jsonplaceholder.typicode.com/posts';
@@ -36,9 +37,34 @@ export default function App() {
     fetchPosts();
   }, []);
 
+  useEffect(() => {}, [searchuser]);
+
+  const filterUser = (searchuser: String) => {
+    console.log(searchuser);
+
+    if (searchuser != '') {
+      console.log(users);
+      const filteredUser = users.filter((x) =>
+        x.name.toLowerCase().startsWith(searchuser)
+      );
+      console.log(filteredUser);
+      setUsers(filteredUser);
+    } else {
+      fetchUsers();
+      fetchPosts();
+    }
+  };
+
   return (
     <div>
       <h2 data-testid="my-title">Users Post</h2>
+      <div>
+        <input
+          type="search"
+          placeholder="search user🔍"
+          onChange={(e) => filterUser(e.target.value)}
+        />
+      </div>
       {users.length > 0 &&
         posts.length > 0 &&
         users.map((user, key) => (

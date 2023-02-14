@@ -3,6 +3,12 @@ p {
   font-family: Lato;
 }
 
+input {
+  width: 200px;
+  border-radius: 5px;
+  /* float: center; */
+}
+
 h2 {
   justify-content: center;
   text-align: center;
