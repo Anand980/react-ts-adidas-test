@@ -1,3 +1,3 @@
-# react-ts-adidas-test
+### `npm test`
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/react-ts-b6hvbq)
+Launches the test runner in the interactive watch mode.<br>
